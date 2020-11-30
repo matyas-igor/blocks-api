@@ -4,7 +4,7 @@
   "description": "Simple Apollo's GraphQL API for blocks from Bitcoin's blockchain",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-node src/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +17,16 @@
     "url": "https://github.com/matyas-igor/blocks-api/issues"
   },
   "homepage": "https://github.com/matyas-igor/blocks-api#readme",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.9.5",
+    "apollo-server": "^2.19.0",
+    "graphql": "^15.4.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.12.8",
     "@babel/core": "^7.12.9",
     "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-node": "^11.1.0",
