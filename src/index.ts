@@ -16,6 +16,8 @@ const resolvers = {
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  introspection: true,
+  playground: true,
   dataSources: () => {
     return {
       blocksAPI: new BlocksAPI(),
