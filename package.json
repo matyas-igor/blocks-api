@@ -4,8 +4,7 @@
   "description": "Simple Apollo's GraphQL API for blocks from Bitcoin's blockchain",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build && npm run serve",
-    "serve": "node ./dist/index.js",
+    "start": "node ./dist/index.js",
     "build": "tsc",
     "lint": "eslint --ext .tsx,.ts,.js,.jsx ./ --ignore-path .gitignore",
     "lint:fix": "eslint --ext .tsx,.ts,.js,.jsx --fix ./ --ignore-path .gitignore",
