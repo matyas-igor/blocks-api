@@ -3,7 +3,7 @@ import { Kind } from 'graphql/language'
 
 export const HashResolver = new GraphQLScalarType({
   name: 'Hash',
-  description: 'Custom hash scalar type',
+  description: 'Hash scalar type',
   parseValue(value) {
     return value
   },

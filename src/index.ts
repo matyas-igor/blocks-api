@@ -1,19 +1,15 @@
 import { ApolloServer } from 'apollo-server'
+import { typeDefs } from './schema'
 import { BlocksAPI } from './sources/blocks'
 import { DayResolver } from './resolvers/Day'
 import { HashResolver } from './resolvers/Hash'
-import { typeDefs } from './schema'
+import { BlocksQuery } from './queries/blocks'
 
 const resolvers = {
   Day: DayResolver,
   Hash: HashResolver,
   Query: {
-    blocks: async (_source, { date }, { dataSources }) => {
-      return dataSources.blocksAPI.getBlocks(date)
-    },
-    block: async (_source, { hash }, { dataSources }) => {
-      return dataSources.blocksAPI.getBlockByHash(hash)
-    },
+    ...BlocksQuery,
   },
 }
 
