@@ -1,0 +1,33 @@
+{
+  "name": "blocks-api",
+  "version": "1.0.0",
+  "description": "Simple Apollo's GraphQL API for blocks from Bitcoin's blockchain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matyas-igor/blocks-api.git"
+  },
+  "keywords": [],
+  "author": "Igor Matias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matyas-igor/blocks-api/issues"
+  },
+  "homepage": "https://github.com/matyas-igor/blocks-api#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.2.1"
+  },
+  "engines": {
+    "node": ">=12.x"
+  }
+}
