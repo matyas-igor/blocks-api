@@ -5,6 +5,10 @@ Simple GraphQL API for blocks from Bitcoin's blockchain.
 - Built with Apollo and REST Data Sources
 - Hosted example: https://blocks-graphql-api.herokuapp.com/
 
+![Screen Shot 2020-11-30 at 23 34 04](https://user-images.githubusercontent.com/3536796/100661829-561de000-3354-11eb-8efc-1594b066afde.png)
+
+![Screen Shot 2020-11-30 at 23 35 07](https://user-images.githubusercontent.com/3536796/100661833-57e7a380-3354-11eb-81e0-016e18285b0c.png)
+
 # Caching
 
 - For caching in this project optimal setup would be Cache Aside strategy with LRU policy
