@@ -6,13 +6,12 @@ export class BlocksAPI extends RESTDataSource {
     this.baseURL = 'https://blockchain.info/'
   }
 
-  async getBlocks(date) {
+  async getBlocks(date: Date) {
     const data = await this.get(`blocks/${date.getTime()}?format=json`)
     return data.blocks
   }
 
-  async getBlockByHash(hash) {
-    const data = await this.get(`rawblock/${hash}`)
-    return data
+  async getBlockByHash(hash: string) {
+    return this.get(`rawblock/${hash}`)
   }
 }
