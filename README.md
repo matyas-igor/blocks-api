@@ -3,7 +3,7 @@
 Simple GraphQL API for blocks from Bitcoin's blockchain.
 
 - Built with Apollo and REST Data Sources
-- Hosted example: Hosted example: https://blocks-graphql-api.herokuapp.com/
+- Hosted example: https://blocks-graphql-api.herokuapp.com/
 
 # Caching
 
