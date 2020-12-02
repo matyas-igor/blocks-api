@@ -1,14 +1,13 @@
 # 🤖 Bitcoin's blocks Explorer - GraphQL API
 
-Simple GraphQL API for blocks from Bitcoin's blockchain.
+Simple GraphQL API for blocks from Bitcoin's blockchain
 
 - Built with Apollo and REST Data Sources
 - Uses [Blockchain.com Explorer](https://www.blockchain.com/explorer) API
-- Hosted example: https://blocks-graphql-api.herokuapp.com/
 
-![Screen Shot 2020-11-30 at 23 34 04](https://user-images.githubusercontent.com/3536796/100661829-561de000-3354-11eb-8efc-1594b066afde.png)
+Hosted example: https://blocks-graphql-api.herokuapp.com/
 
-![Screen Shot 2020-11-30 at 23 35 07](https://user-images.githubusercontent.com/3536796/100661833-57e7a380-3354-11eb-81e0-016e18285b0c.png)
+![Screen Shot 2020-12-02 at 23 55 48](https://user-images.githubusercontent.com/3536796/100930451-67e4bc00-34e9-11eb-8d02-81a7528f49d5.png)
 
 # Caching
 
@@ -32,3 +31,61 @@ Simple GraphQL API for blocks from Bitcoin's blockchain.
 - Lots of things like proper validation are simplified
 - No logging implemented at the moment
 - It's still pretty naive implementation of blockchain-like API
+
+# Examples
+
+Query examples:
+
+```graphql
+{
+  blocks(date: "2020-11-29", offset: 0, limit: 10) {
+    total
+    blocks {
+      height
+      hash
+      time  
+    }
+  }
+  
+  block(hash: "0000000000000000000ca70f82b7fa348ddb5d00ed9526ed40a7ccf85e5b18e4") {
+    hash
+    ver
+    fee
+    prev_block
+    mrkl_root
+    time
+    bits
+    block_index
+    height
+    weight
+    main_chain
+    n_tx
+    nonce
+    size
+  }
+  
+  transactions(hash: "0000000000000000000ca70f82b7fa348ddb5d00ed9526ed40a7ccf85e5b18e4", offset: 0, limit: 10) {
+    total
+    transactions {
+      fee
+      hash
+      inputs {
+        index
+        prev_out {
+          addr
+          value
+        }
+      }
+      lock_time
+      out {
+        addr
+        value
+      }
+      size
+      time
+      tx_index
+      weight
+    }
+  }
+}
+```
