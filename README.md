@@ -1,4 +1,4 @@
-# 🤖 Blocks Explorer
+# 🤖 Bitcoin's blocks Explorer - GraphQL API
 
 Simple GraphQL API for blocks from Bitcoin's blockchain.
 
