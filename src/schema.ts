@@ -3,6 +3,7 @@ import { gql } from 'apollo-server'
 export const typeDefs = gql`
   scalar Day
   scalar Hash
+  scalar BigInt
 
   type BlockDescription {
     height: Int
@@ -16,15 +17,15 @@ export const typeDefs = gql`
     mrkl_root: Hash
     ver: Int
     time: Int
-    bits: Int
-    fee: Int
-    nonce: Int
+    bits: BigInt
+    fee: BigInt
+    nonce: BigInt
     n_tx: Int
-    size: Int
+    size: BigInt
     block_index: Int
     main_chain: Boolean
     height: Int
-    weight: Int
+    weight: BigInt
   }
 
   type BlocksConnection {
@@ -35,7 +36,7 @@ export const typeDefs = gql`
   type TransactionOutput {
     type: Int
     spent: Boolean
-    value: Int
+    value: BigInt
     n: Int
     addr: String
     tx_index: Int
@@ -43,7 +44,7 @@ export const typeDefs = gql`
   }
 
   type TransactionInput {
-    sequence: Int
+    sequence: BigInt
     witness: String
     script: String
     index: Int
@@ -57,10 +58,10 @@ export const typeDefs = gql`
     vout_sz: Int
     size: Int
     weight: Int
-    fee: Int
+    fee: BigInt
     relayed_by: String
     lock_time: Int
-    tx_index: Int
+    tx_index: BigInt
     double_spend: Boolean
     result: Int
     balance: Int

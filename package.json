@@ -24,6 +24,7 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.9.5",
     "apollo-server": "^2.19.0",
+    "apollo-type-bigint": "^0.1.3",
     "graphql": "^15.4.0",
     "winston": "^3.3.3"
   },

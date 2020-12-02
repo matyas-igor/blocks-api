@@ -1,4 +1,5 @@
 import { ApolloServer } from 'apollo-server'
+import BigInt from 'apollo-type-bigint'
 import { typeDefs } from './schema'
 import { BlocksAPI } from './sources/blocks'
 import { DayResolver } from './resolvers/Day'
@@ -9,6 +10,7 @@ import { logger } from './helpers/logs'
 const resolvers = {
   Day: DayResolver,
   Hash: HashResolver,
+  BigInt: new BigInt('bigInt'),
   Query: {
     ...BlocksQuery,
   },
