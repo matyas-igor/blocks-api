@@ -8,7 +8,7 @@ export class BlocksAPI extends RESTDataSource {
 
   async getBlocks(date: Date) {
     const data = await this.get(`blocks/${date.getTime()}?format=json`)
-    return data.blocks
+    return data.blocks.reverse()
   }
 
   async getBlockByHash(hash: string) {

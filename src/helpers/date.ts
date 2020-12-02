@@ -7,5 +7,5 @@ export const formatDay = (date?: Date | null): string | null => {
 }
 
 export const validateDay = (value?: string | null): boolean => {
-  return /^\d{4}-\d{2}-\d{2}$/.test(value)
+  return /^\d{4}-\d{2}-\d{2}$/.test(`${value}`)
 }
