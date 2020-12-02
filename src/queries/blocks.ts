@@ -10,14 +10,15 @@ export const BlocksQuery = {
       blocks: paginate(blocks, offset, limit),
     }
   },
+
   block: async (_source, { hash }, { dataSources }, info) => {
     info.cacheControl.setCacheHint({ maxAge: 300 })
     return await dataSources.blocksAPI.getBlockByHash(hash)
   },
+
   transactions: async (_source, { hash, offset, limit }, { dataSources }, info) => {
     info.cacheControl.setCacheHint({ maxAge: 300 })
     const block = await dataSources.blocksAPI.getBlockByHash(hash)
-
     return {
       total: block.tx.length,
       transactions: paginate(block.tx, offset, limit),
