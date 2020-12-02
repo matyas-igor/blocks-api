@@ -4,6 +4,7 @@ import { BlocksAPI } from './sources/blocks'
 import { DayResolver } from './resolvers/Day'
 import { HashResolver } from './resolvers/Hash'
 import { BlocksQuery } from './queries/blocks'
+import { logger } from './helpers/logs'
 
 const resolvers = {
   Day: DayResolver,
@@ -26,5 +27,5 @@ const server = new ApolloServer({
 })
 
 server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
-  console.log(`🚀  Server ready at ${url}`)
+  logger.info(`🚀  Server ready at ${url}\n`)
 })

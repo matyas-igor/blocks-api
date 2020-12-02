@@ -1,4 +1,5 @@
 import { RESTDataSource } from 'apollo-datasource-rest'
+import { runFetchRequest } from '../helpers/utils'
 
 export class BlocksAPI extends RESTDataSource {
   constructor() {
@@ -7,11 +8,13 @@ export class BlocksAPI extends RESTDataSource {
   }
 
   async getBlocks(date: Date) {
-    const data = await this.get(`blocks/${date.getTime()}?format=json`)
+    const path = `blocks/${date.getTime()}?format=json`
+    const data = await runFetchRequest(this.get(path), this.baseURL + path)
     return data.blocks.reverse()
   }
 
   async getBlockByHash(hash: string) {
-    return this.get(`rawblock/${hash}`)
+    const path = `rawblock/${hash}`
+    return runFetchRequest(this.get(path), this.baseURL + path)
   }
 }

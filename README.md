@@ -21,6 +21,11 @@ Simple GraphQL API for blocks from Bitcoin's blockchain.
   - To implement a single cache layer for multiple web server node instances
 - For development setup I just used a simple built-in caching instruments from Apollo
 
+# Logging
+
+- Now used simple winston console logger
+- In a real-world environment logs should be written into files and rotated
+
 # Limitation
 
 - Build and run scripts are not fully production-ready, they are not properly optimized
